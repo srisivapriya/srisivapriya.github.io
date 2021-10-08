@@ -12,13 +12,13 @@
     @include heading-font;
   }
   .navbar-brand {
-    color: $primary;
+    color: #fed136;
     @include script-font;
     &.active,
     &:active,
     &:focus,
     &:hover {
-      color: darken($primary, 10%);
+      color: darken(#fed136, 10%);
     }
   }
   .navbar-nav {
@@ -38,7 +38,7 @@
     }
   }
 }
-@media(min-width:992px) {
+@media (min-width: 992px) {
   #mainNav {
     padding-top: 25px;
     padding-bottom: 25px;

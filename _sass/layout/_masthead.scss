@@ -1,13 +1,28 @@
 // Styling for the masthead
+header.masthead::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 header.masthead {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   color: white;
-  background-image: url("#{$header-image}");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
   .intro-text {
+    position: relative;
     padding-top: 150px;
     padding-bottom: 100px;
     .intro-lead-in {
@@ -26,7 +41,8 @@ header.masthead {
     }
   }
 }
-@media(min-width:768px) {
+
+@media (min-width: 991.98px) {
   header.masthead {
     .intro-text {
       padding-top: 300px;

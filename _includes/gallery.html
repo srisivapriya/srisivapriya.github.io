@@ -1,0 +1,29 @@
+<!-- Gallery -->
+<div class="container-fluid">
+  <div class="row justify-content-center pb-3">
+    <div class="col-lg-12 text-center" data-aos="fade-up">
+      <h2 class="text-uppercase mb-1">{{ site.data.gallery.title | default: 'OUR GALLERY' }}</h2>
+      <p class="fs-5 text-muted">{{ site.data.gallery.desc | default: "If you want to know what a man's like, take a good look at how he treats his inferiors, not his equals"}}</p>
+      <p class="mt-4">
+        <a href="/gallery" class="btn btn-lg btn-primary btn-outline-primary py-2" style="color: white;">More</a>
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    {% for project in site.data.gallery.featured %}
+    <div class="col-md-6 col-lg-3" data-aos="fade-up" style="padding: 0px;">
+      <div class="project">
+        <img src="{{ project.img }}" class="img-fluid" alt="{{ project.name }}">
+        <div class="text">
+          <span>{{ project.name }}</span>
+          <h3><a href="{{ project.link }}">{{ project.type }}</a></h3>
+        </div>
+        <a href="{{ project.img }}" class="icon image-popup d-flex justify-content-center align-items-center">
+          <i class="fas fa-expand-alt"></i>
+        </a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<!-- End Gallery -->

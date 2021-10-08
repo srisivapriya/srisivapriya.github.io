@@ -45,3 +45,10 @@ section#contact {
     @include heading-font;
   }
 }
+
+@media (min-width: 768px) {
+  .contact-phone {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+  }
+}

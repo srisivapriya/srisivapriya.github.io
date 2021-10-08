@@ -11,18 +11,18 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-theme: jekyll-agency
+theme: jekyll-theme-fiery
 
-url    : "http://srisivapriya.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://srisivapriya.com" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 
-title      : Sri Siva Priya
-email      : srisivapriya.ssp@gmail.com #this is also the email contact forms will go to
+title: Sri Siva Priya
+email: srisivapriya.ssp@gmail.com #this is also the email contact forms will go to
 description: "We are sincere, honest and genuine in all that we do"
-author     : Siva Priya
+author: Siva Priya
 # logo:     #optional, defaults to site title
-  # path: assets\img\clients\creative-market.jpg
-  # height: 60 #height in px, defaults to 52px
+# path: assets\img\clients\creative-market.jpg
+# height: 60 #height in px, defaults to 52px
 
 locale: "en-US" # See available languages in _data/sitetext.yml
 
@@ -31,9 +31,38 @@ analytics:
 
 collections:
   portfolio:
+    output: true
 
 markdown: kramdown
 
+defaults:
+  - scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "page"
 # Uncomment following line to use Formspree form ID based URL instead of email based URL
 # Details: https://help.formspree.io/hc/en-us/articles/360017735154-How-to-prevent-spam
-# formspree_form_path: "f/a_form_id"
+formspree_form_path: "f/xleazyvp"
+
+plugins:
+  - jekyll-feed
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

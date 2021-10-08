@@ -1,0 +1,65 @@
+title: "OUR AMAZING TEAM"
+text: "Keep moving together."
+subtext: Alone we can do so little, together we can do so much..
+section: team
+people:
+  - name: "Jerome Bradley"
+    role: "Founder"
+    image: assets/img/team/1.jpg
+    social:
+      - url: https://twitter.com
+        icon: fab fa-twitter
+      - url: https://facebook.com
+        icon: fab fa-facebook-f
+      - url: https://linkedin.com
+        icon: fab fa-linkedin-in
+  - name: "Diana Perterson"
+    role: "Lead Designer"
+    image: assets/img/team/2.jpg
+    social:
+      - url: https://twitter.com
+        icon: fab fa-twitter
+      - url: https://facebook.com
+        icon: fab fa-facebook-f
+      - url: https://linkedin.com
+        icon: fab fa-linkedin-in
+  - name: "Howell Riley"
+    role: "Lead Marketing"
+    image: assets/img/team/3.jpg
+    social:
+      - url: https://twitter.com
+        icon: fab fa-twitter
+      - url: https://facebook.com
+        icon: fab fa-facebook-f
+      - url: https://linkedin.com
+        icon: fab fa-linkedin-in
+  - name: "Rachel Clinton"
+    role: "Human Resources (HR) Specialist"
+    image: assets/img/team/4.jpg
+    social:
+      - url: https://twitter.com
+        icon: fab fa-twitter
+      - url: https://facebook.com
+        icon: fab fa-facebook-f
+      - url: https://linkedin.com
+        icon: fab fa-linkedin-in
+  - name: "Leonard Peay"
+    role: "Financial Advisor"
+    image: assets/img/team/5.jpg
+    social:
+      - url: https://twitter.com
+        icon: fab fa-twitter
+      - url: https://facebook.com
+        icon: fab fa-facebook-f
+      - url: https://linkedin.com
+        icon: fab fa-linkedin-in
+  - name: "Brooke Clarke"
+    role: "Lead Developer"
+    image: assets/img/team/6.jpg
+    social:
+      - url: https://twitter.com
+        icon: fab fa-twitter
+      - url: https://facebook.com
+        icon: fab fa-facebook-f
+      - url: https://linkedin.com
+        icon: fab fa-linkedin-in

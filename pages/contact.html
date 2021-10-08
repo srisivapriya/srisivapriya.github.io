@@ -1,0 +1,77 @@
+---
+layout: page
+title: Contact
+permalink: /contact
+---
+
+<!-- Contact -->
+<section class="page-section" id="{{ site.data.contact.section | default: "contact" }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center" data-aos="fade-up">
+        <h2 class="section-heading text-uppercase">{{ site.data.contact.title | markdownify | default: "Contact Us" }}</h2>
+      </div>
+    </div>
+    <div class="row text-center mb-5">
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="contact-address">
+          <i class="fas fa-map-marker-alt text-primary mb-3 fa-3x"></i>
+          <h3 class="text-white">{{ site.data.contact.address | default: "Address" }}</h3>
+          <address class="text-white">{{ site.data.contact.address-text | default: "Balaga, Srikakulam, AP 532001, India" }}</address>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="contact-phone">
+          <i class="fas fa-phone-alt text-primary mb-3 fa-3x"></i>
+          <h3 class="text-white">{{ site.data.contact.contact-phone | default: "Phone Number" }}</h3>
+          <p><a class="text-white" href="tel:{{ site.data.contact.contact-phone-text | default: "+91 9848022338" }}">{{ site.data.contact.contact-phone-text | default: "+91 9848022338" }}</a></p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="contact-email">
+          <i class="fas fa-envelope text-primary mb-3 fa-3x"></i>
+          <h3 class="text-white">{{ site.data.contact.contact-email | default: "Email" }}</h3>
+          <p><a class="text-white" href="mailto:{{ site.data.contact.contact-email-text | default: "info@example.com" }}">{{ site.data.contact.contact-email-text | default: "info@example.com" }}</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12" data-aos="fade-up">
+        <form id="contactForm" method="POST" action="{% if site.formspree_form_path %}https://formspree.io/{{ site.formspree_form_path }}{% else %}mailto:{{ site.email }}{% endif %}">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <input name="name" class="form-control" id="name" type="text" placeholder="{{ site.data.contact.name | default: 'Name*' }}" required="required" data-validation-required-message="{{ site.data.contact.name-validation | default: 'Please enter your name.' }}">
+              </div>
+              <div class="form-group">
+                <input name="_replyto" class="form-control" id="email" type="email" placeholder="{{ site.data.contact.email | default: 'Email*' }}" required="required" data-validation-required-message="{{ site.data.contact.email-validation | default: 'Please enter your email address.' }}">
+              </div>
+              <div class="form-group">
+                <input name="phone" class="form-control" id="phone" type="tel" placeholder="{{ site.data.contact.phone | default: 'Phone Number*' }}" required="required" data-validation-required-message="{{ site.data.contact.phone-validation | default: 'Please enter your phone number.' }}">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <textarea name="message" class="form-control" id="message" placeholder="{{ site.data.contact.message | default: 'Message*' }}" required="required" data-validation-required-message="{{ site.data.contact.message-validation | default: 'Please enter a message.' }}"></textarea>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="agreed" required>
+                <label class="form-check-label" for="agreed"><span class="section-subheading text-white">Agree to terms and conditions</span></label>
+              </div>
+            </div>
+            <input type="hidden" name="_subject" id="email-subject" value="{{ site.data.contact.subject | default: 'Contact Form Submission' }}">
+            <div class="col-lg-12 text-center">
+              <div id="success"></div>
+              <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">{{ site.data.contact.submit | default: "Send Message" }}</button>
+            </div>
+            <input type="text" name="_gotcha" style="display:none">
+            <input type="hidden" name="_next" value="#" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Contact -->

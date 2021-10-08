@@ -2,10 +2,8 @@
 layout: default
 ---
 {% include navheader.html %}
-
-{% include services.html %}
-{% include portfolio_grid.html %}
-{% include timeline.html %}
-{% include team.html %}
-{% include clients.html %}
-{% include contact.html %}
+<section class="page-section" id="services">{% include services.html %}</section>
+<section class="page-section py-0" id="about" style="height: 100vh;">{% include vid-card.html %}</section>
+{% include portfolio.html %}
+<section class="page-section pb-0" id="gallery">{% include gallery.html %}</section>
+<section class="page-section pt-0" id="contact">{% include contact.html %}</section>

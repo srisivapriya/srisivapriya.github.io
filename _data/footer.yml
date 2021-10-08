@@ -1,0 +1,47 @@
+title: "Sri Siva Priya"
+description: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts."
+
+legal:
+  - title: "Privacy Policy"
+    url: "privacy"
+  - title: "Disclaimer"
+    url: "disclaimer"
+
+social:
+  - url: https://twitter.com
+    icon: "fab fa-twitter"
+  - url: https://facebook.com
+    icon: "fab fa-facebook-f"
+  - url: https://linkedin.com
+    icon: "fab fa-linkedin-in"
+  - url: "#"
+    icon: "fab fa-github"
+  - url: https://instagram.com
+    icon: "fab fa-instagram"
+
+pages:
+  left:
+    - title: "Home"
+      url: #
+    - title: "About"
+      url: #
+    - title: "Services"
+      url: #
+  right:
+    - title: "Work"
+      url: #
+    - title: "Blog"
+      url: #
+    - title: "Contact"
+      url: #
+
+reach:
+  - title: 203 Fake St. Mountain View, San Francisco, California, USA
+    icon: "fas fa-map-marked-alt"
+    url: #
+  - title: +2 392 3929 210
+    icon: "fas fa-phone-alt"
+    url: #
+  - title: info@yourdomain.com
+    icon: "fas fa-envelope"
+    url: #

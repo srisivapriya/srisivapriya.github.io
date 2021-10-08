@@ -1,0 +1,32 @@
+<!-- features -->
+<div class="container-fluid bg-light" data-aos="fade-up">
+  <div class="row">
+    <div class="col-lg text-center d-flex align-items-stretch" style="padding: 0px;">
+      <div class="features d-flex align-items-center img" style="background-size: cover; background-image: url({{ site.data.features.left.image }});">
+        <div class="text">
+          <h3>{{ site.data.features.left.name | default: 'Offer 1' }}</h3>
+          <p><a href="{{ site.data.features.left.button.link | default: '#' }}" class="btn-custom">{{ site.data.features.left.button.name | default: 'More' }} <span>{{ site.data.features.left.button.icon | default: '>' }}</span></a></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 text-center d-flex align-items-stretch" style="padding: 0px;">
+      <div class="text-about py-5 px-4">
+        <h1 class="logo">
+          <a href="{{ site.data.features.logo.link | default: '#' }}"><span class="flaticon-scissors-in-a-hair-salon-badge"></span>{{ site.data.features.logo.name | default: 'Fiery' }}</a>
+        </h1>
+        <h2 class="mb-3">{{ site.data.features.title | default: 'Welcome to Fiery Theme' }}</h2>
+        <p class="fs-6">{{ site.data.features.desc | default: "If you want to know what a man's like, take a good look at how he treats his inferiors, not his equals" }}</p>
+        <p class="mt-3"><a href="{{ site.data.features.buttonlink | default: '#' }}" class="btn btn-primary btn-outline-primary text-white">{{ site.data.features.button | default: 'Read More' }}</a></p>
+      </div>
+    </div>
+    <div class="col-lg text-center d-flex align-items-stretch" style="padding: 0px;">
+      <div class="features d-flex align-items-center img" style="background-size: cover; background-image: url({{ site.data.features.right.image }});">
+        <div class="text">
+          <h3>{{ site.data.features.right.name | default: 'Offer 2' }}</h3>
+          <p><a href="{{ site.data.features.right.button.link | default: '#' }}" class="btn-custom">{{ site.data.features.right.button.name | default: 'More' }} <span>{{ site.data.features.right.button.icon | default: '>' }}</span></a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End features -->

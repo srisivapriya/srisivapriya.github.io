@@ -1,0 +1,56 @@
+<!-- Header -->
+<header class="masthead parallax" style="background-image: url({{ page.img | default: '/assets/img/bg-1.jpg'}});">
+  <div class="container" data-aos="fade-up">
+    <div class="intro-text">
+      <div class="intro-heading text-uppercase">{{ page.title | markdownify }}</div>
+    </div>
+    <div id="scroll-section">
+      <a href="#mainNav" style="left: 50%;" class="text-white js-scroll-trigger"><span></span>Scroll</a>
+    </div>
+    <a href="#mainNav" class='icon-scroll'></a>
+  </div>
+</header>
+<!-- End Header -->
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" id="mainNav" style="padding-top: 0; padding-bottom: 0;">
+  <div class="container">
+    <a class="navbar-brand js-scroll-trigger" href="{{ site.baseurl }}/" style="font-size: 1.25em; padding: 12px 0;">
+      {%- if site.logo -%}
+        <img height="{{ site.logo.height | default: 52 }}" src="{{ site.logo.path }}" />
+      {%- else -%}
+        {{ site.title }}
+      {%- endif -%}
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav text-uppercase ms-auto">
+        {%- for link in site.data.navigation.page -%}
+          {% if link.subnav %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ link.title }}</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              {%- for sub in link.subnav -%}
+                <li><a class="dropdown-item" href="{{ sub.url }}">{{ sub.name }}</a></li>
+              {% endfor %}
+            </ul>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            {%- if link.url -%}
+              <a class="nav-link js-scroll-trigger" href="{{ link.url }}">{{ link.title }}</a>
+            {%- else if link.section -%}
+              <a class="nav-link js-scroll-trigger" href="{{ site.baseurl }}/#{{ link.section }}">{{ link.title }}</a>
+            {%- else -%}
+              <a class="nav-link js-scroll-trigger" href="#">{{ link.title }}</a>
+            {%- endif -%}
+          </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- End Navigation -->

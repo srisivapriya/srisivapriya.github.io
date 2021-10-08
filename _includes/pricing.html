@@ -1,0 +1,32 @@
+<!-- pricing -->
+<section>
+  <div class="container">
+    <div class="row justify-content-center pb-3">
+      <div class="col-md-10 text-center" data-aos="fade-up">
+        <h2 class="mb-3">{{ site.data.pricing.title | default: 'OUR PRICES' }}</h2>
+        <p class="fs-5 text-muted">{{ site.data.pricing.desc | deafult: 'Be who you are and say what you feel, because those who mind don't matter, and those who matter don't mind.'}}</p>
+      </div>
+    </div>
+    <div class="row">
+      {% for item in site.data.pricing.list %}
+      <div class="col-md-3" data-aos="fade-up">
+        <div class="pricing-entry pb-5 text-center">
+          <div>
+            <h3 class="mb-4">{{ item.name }}</h3>
+            <p><span class="price">{{ item.price }}</span> <span class="ls-6">{{ item.per }}</span></p>
+          </div>
+          <ul>
+            {% for feature in item.features %}
+            <li>{{ feature}}</li>
+            {% endfor %}
+          </ul>
+          <p class="button text-center">
+            <a href="{{ item.buttonlink }}" class="btn btn-primary px-4 py-3">{{ item.button }}</a>
+          </p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- End Pricing -->

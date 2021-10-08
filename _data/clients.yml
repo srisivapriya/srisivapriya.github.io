@@ -1,0 +1,16 @@
+section: clients
+max-height: 100px
+horizontal-scrolling: "" #"yes/no"
+list:
+  - title: "Google"
+    url: "#"
+    logo: assets/img/clients/google.jpg
+  - title: "microsoft"
+    url: "#"
+    logo: assets/img/clients/microsoft.png
+  - title: "youtube"
+    url: "#"
+    logo: assets/img/clients/youtube.png
+  - title: "Netflix"
+    url: "#"
+    logo: assets/img/clients/netflix.png

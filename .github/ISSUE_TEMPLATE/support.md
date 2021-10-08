@@ -10,10 +10,8 @@ assignees: ''
 <!--
   Before opening a new issue please:
   
-  - Verify you have the latest versions of Jekyll and Agency 
-    installed by running `bundle update`.
-  - Search all issues at https://github.com/raviriley/agency-jekyll-theme/issues
-    for solutions and to avoid duplication.
+  - Verify you have the latest versions of Jekyll and installed by running `bundle update`.
+  - Search all issues for solutions and to avoid duplication.
   
   After exhausting these suggestions ask your question below.
 

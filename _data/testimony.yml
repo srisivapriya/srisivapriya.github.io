@@ -1,0 +1,27 @@
+title: Happy Customer
+subtitle: Testimony
+list:
+  - name: "Jerome Bradley"
+    position: "Founder"
+    image: assets/img/team/1.jpg
+    text: Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+  - name: "Diana Perterson"
+    position: "Lead Designer"
+    image: assets/img/team/2.jpg
+    text: Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+  - name: "Howell Riley"
+    position: "Lead Marketing"
+    image: assets/img/team/3.jpg
+    text: Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+  - name: "Rachel Clinton"
+    position: "Human Resources (HR) Specialist"
+    image: assets/img/team/4.jpg
+    text: Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+  - name: "Leonard Peay"
+    position: "Financial Advisor"
+    image: assets/img/team/5.jpg
+    text: Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+  - name: "Brooke Clarke"
+    position: "Lead Developer"
+    image: assets/img/team/6.jpg
+    text: Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
