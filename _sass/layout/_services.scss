@@ -3,3 +3,28 @@
   margin: 15px 0;
   text-transform: none;
 }
+
+#about .parallax {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("#{$about-image}") fixed center center;
+
+  /* Set a specific height */
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  h3 {
+    color: $white;
+    font-size: 28px;
+    font-weight: 700;
+  }
+  
+  p {
+    color: $white;
+  }
+}

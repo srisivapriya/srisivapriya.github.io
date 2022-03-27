@@ -1,9 +1,146 @@
 ---
 layout: default
 ---
-{% include navheader.html %}
-<section class="page-section" id="services">{% include services.html %}</section>
-<section class="page-section py-0" id="about" style="height: 100vh;">{% include vid-card.html %}</section>
-{% include portfolio.html %}
-<section class="page-section pb-0" id="gallery">{% include gallery.html %}</section>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand js-scroll-trigger" href="/">
+      {%- if site.logo -%}
+      <img height="{{ site.logo.height | default: 52 }}" src="{{ site.logo.path }}" />
+      {%- else -%}
+      {{ site.title }}
+      {%- endif -%}
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+      data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+      aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav text-uppercase ms-auto">
+        {%- for link in site.data.navigation.home -%}
+        <li class="nav-item">
+          {%- if link.url -%}
+          <a class="nav-link js-scroll-trigger" href="#{{ link.url }}">{{ link.title }}</a>
+          {%- else -%}
+          <a class="nav-link js-scroll-trigger" href="#">{{ link.title }}</a>
+          {%- endif -%}
+        </li>
+        {% endfor %}
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- End Navigation -->
+
+<!-- Header -->
+<header class="masthead parallax" style="background-image: url('{{ site.data.style.header-image }}');">
+  <div class="container" data-aos="fade-up">
+    <a href="#services" class='icon-scroll'></a>
+  </div>
+</header>
+<!-- End Header -->
+
+<!-- Services -->
+<div class="page-section" id="services">
+  <div class="container" style="height: 30vh;">
+    <br><br>
+    <div class="row justify-content-center">
+      <div class="col-lg-12 text-center" data-aos="fade-up">
+        <h2 class="section-heading text-uppercase">{{ site.data.sitetext.title | default: "Services" }}</h2>
+        {% if site.data.sitetext.text %}
+        <h3 class="section-subheading text-muted">{{ site.data.sitetext.text }}</h3>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <section id="call-to-action" data-aos="fade-up" style="height: 60vh;">
+      <div class="row text-center">
+        {% for service in site.data.sitetext.list %}
+        <div class="col-md-4" data-aos="fade-up">
+          <i class="{{ service.icon | default: 'fas fa-shopping-cart' }} fa-3x text-primary"></i>
+          <h4 class="service-heading">{{ service.title | markdownify }}</h4>
+          {% if service.desc %}<div class="text-muted">{{ service.desc | markdownify }}</div>{% endif %}
+        </div>
+        {% endfor %}
+      </div>
+  </section>  
+</div>
+<!-- End Services -->
+
+<!-- About -->
+<div class="page-section" id="about">
+  <div class="container text-center" style="height: 15vh;" data-aos="fade-up">
+        <h2 class="section-heading text-uppercase">{{ site.data.sitetext.about.title | default: 'About Us' }}</h2>
+  </div>
+  <section class="parallax" data-aos="fade-up" style="height: 80vh;">
+    <div class="container text-center">
+      <h3>{{ site.data.sitetext.about.heading | default: 'Respect!' }}</h3>
+      {% for text in site.data.sitetext.about.desc %}
+        <p class="m-0 p-0" data-aos="fade-up">{{ text }}</p>
+      {% endfor %}
+    </div>
+  </section>  
+</div>
+<!-- End About -->
+
+<!-- Portfolio Grid -->
+<section class="bg-light page-section" id="{{ site.data.sitetext.portfolio.section | default: " portfolio" }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center" data-aos="fade-up">
+        <h2 class="section-heading text-uppercase">
+          {{ site.data.sitetext.portfolio.title | markdownify | default: "Portfolio" }}
+        </h2>
+        <h3 class="section-subheading text-muted">{{ site.data.sitetext.portfolio.text | markdownify }}</h3>
+      </div>
+    </div>
+    <div class="row">
+      {% for project in site.portfolio %}
+      <div class="col-md-4 col-sm-6" data-aos="fade-up">
+        <div class="portfolio-item">
+          <img class="img-fluid" src="{{ project.image }}" alt="{{ project.title }}" onerror="this.style.display='none'">
+          <h3 class="namecard">{{ project.title }}</h3>
+          <a class="text" href="{{ project.permalink | default: project.redirect  | default: " #" }}" {% if project.redirect %}target="_blank"{% endif %}>
+            <h3>{{ project.title }}</h3>
+            <span>{% if project.icon %}<i class="{{ project.icon }}"></i> {% endif %}{{ project.caption }}</span>
+            <p>{{ project.description }}</p>
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section class="page-section pb-0" id="gallery">
+  <div class="container-fluid">
+    <div class="row justify-content-center pb-3">
+      <div class="col-lg-12 text-center" data-aos="fade-up">
+        <h2 class="text-uppercase mb-1">{{ site.data.sitetext.gallery.title | default: 'OUR GALLERY' }}</h2>
+        <p class="fs-5 text-muted">"If you want to know what a man's like, take a good look at how he treats his inferiors, not his equals"</p>
+        <!-- p class="mt-4">
+          <a href="/gallery" class="btn btn-lg btn-primary btn-outline-primary py-2" style="color: white;">More</a>
+        </p -->
+      </div>
+    </div>
+    <div class="row">
+      {% for img in site.data.sitetext.gallery.featured %}
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" style="padding: 0px;">
+        <div class="project">
+          <img src="{{ img }}" class="img-fluid">
+          <a href="{{ img }}" class="icon image-popup d-flex justify-content-center align-items-center">
+            <i class="fas fa-expand-alt"></i>
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div> 
+  </div>
+</section>
+<!-- End Gallery -->
+
 <section class="page-section pt-0" id="contact">{% include contact.html %}</section>

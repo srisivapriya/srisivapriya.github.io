@@ -1,6 +1,8 @@
 #call-to-action {
   background: linear-gradient(rgba(0, 142, 99, 0.1), rgba(0, 0, 0, 0.1)), url("#{$action-image}") fixed center center;
   background-size: cover;
+  display: flex;
+  align-items: center;
   padding: 60px 0;
 }
 

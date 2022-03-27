@@ -7,15 +7,15 @@ page:
   - title: "Services"
     section: services
     home_only: true
-  - title: "Our Businesses"
-    section: portfolio
-    subnav:
-      - name: SSP Convention Hall
-        url: "#"
-      - name: SSP Filling Station
-        url: "#"
-      - name: SSP Rice Mill
-        url: "#"
+  # - title: "Our Businesses"
+  #   section: portfolio
+  #   subnav:
+  #     - name: SSP Convention Hall
+  #       url: "#"
+  #     - name: SSP Filling Station
+  #       url: "#"
+  #     - name: SSP Rice Mill
+  #       url: "#"
   - title: Gallery
     url: gallery
   - title: "About"

@@ -15,6 +15,7 @@ $dark: {{ site.data.style.dark | default: "#492910" }} !default;
 // Custom Images
 $contact-image: "{{ site.data.style.contact-image }}";
 $action-image: "{{ site.data.style.action-image }}";
+$about-image: "{{ site.data.style.about-image }}";
 
 // Global CSS
 @import "base/page.scss";

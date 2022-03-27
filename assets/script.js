@@ -84,7 +84,10 @@ for (var i = 0; i < elements.length; i++) {
 		},
 		zoom: {
 			enabled: true,
-			duration: 300 // don't foget to change the duration also in CSS
+			duration: 300, // don't foget to change the duration also in CSS
+			opener: function(element) {
+				return element;
+			}
 		}
 	});
 

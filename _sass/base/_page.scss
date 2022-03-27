@@ -41,6 +41,7 @@ h2 {
   font-family: "Barlow Condensed", sans-serif;
   text-transform: uppercase;
 }
+
 .section-header h3 {
   font-size: 32px;
   color: $black;
@@ -59,7 +60,6 @@ h2 {
   height: 1px;
   background: rgba($primary,0.5);
   bottom: 1px;
-  left: calc(50% - 60px);
 }
 
 .section-header h3::after {
@@ -70,7 +70,21 @@ h2 {
   height: 3px;
   background: $primary;
   bottom: 0;
-  left: calc(50% - 20px);
+}
+
+h2.section-heading {
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+h3.section-subheading {
+  font-size: 16px;
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 75px;
+  text-transform: none;
+  @include serif-font;
 }
 
 .lightbg {
@@ -79,25 +93,10 @@ h2 {
 
 .page-section {
   min-height: 100vh;
-  padding: 100px 0;
-  h2.section-heading {
-    font-size: 40px;
-    margin-top: 0;
-    margin-bottom: 15px;
-  }
-  h3.section-subheading {
-    font-size: 16px;
-    font-weight: 400;
-    font-style: italic;
-    margin-bottom: 75px;
-    text-transform: none;
-    @include serif-font;
-  }
-}
-@media (min-width: 768px) {
-  section {
-    padding: 150px 0;
-  }
+  padding-top: 60px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
 }
 
 // Highlight color customization

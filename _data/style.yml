@@ -1,5 +1,5 @@
 #Color Customization
-highlight: "#bf925b"
+highlight: "#fed136"
 #white: "#FF0000"
 #black: "#0b080f"
 #light: "#fff0bc"
@@ -9,5 +9,6 @@ highlight: "#bf925b"
 header-image: "assets/img/header.jpg"
 contact-image: "img/contact.png"
 action-image: "img/call-to-action.jpg"
+about-image: "img/about.jpg"
 #Font Awesome icon for portfolio grid when an item is hovered over
 #portfolio-icon: fas fa-expand-arrows-alt fa-3x #default: fas fa-plus fa-3x

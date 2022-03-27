@@ -1,8 +1,16 @@
-header:
-  title: Welcome to Sri Siva Priya
-  text: Quality is the best business plan
-  button: Scroll
-  buttonlink: "#services"
+title: "Services"
+text: "Genuine Kindness is not what we do, It is what we are"
+section: services
+list:
+  - title: "Quality"
+    desc: "Quality is the best business plan."
+    icon: fa fa-check
+  - title: "Honesty"
+    desc: "Honesty is the cornerstone of all success. Without honesty, confidence and ability to perform shall cease to exist."
+    icon: fa fa-bolt
+  - title: "Responsibility"
+    desc: "Success is not final; failure is not fatal: it is the courage to continue that counts."
+    icon: fa fa-fire
 
 portfolio:
   title: "Our Businesses"
@@ -10,16 +18,35 @@ portfolio:
   section: portfolio
   closebutton: "Close"
 
+about:
+  title: About Us
+  heading: 'Sri Siva Priya'
+  desc: 
+  - "It all started in 80s... That's when our journey started."
+ # - "Along the way, we started SSP Rice Mill, SSP Function Hall and SSP Filling Station."
+  - "We want to be the best in terms of quality and honesty in whatever businesses we do."
+
+gallery:
+  title: Our gallery
+  featured:
+    - /assets/img/gallery/fh-01.jpg
+    - /assets/img/gallery/fh-02.jpg
+    - /assets/img/gallery/fh-03.jpg
+    - /assets/img/gallery/fh-04.jpg
+    - /assets/img/gallery/fh-05.jpg
+    - /assets/img/gallery/fh-06.jpg
+    - /assets/img/gallery/fh-07.jpg
+
 call-to-action:
   title: Call To Action
-  desc: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+  desc: Quality is the best business plan
   button: Call To Action
   buttonlink: "#"
 
 video-card:
   title: Welcome To Haircare A Hair Salon
   url: https://vimeo.com/45830194
-  img: /assets/img/bg-2.jpg
+  img: /assets/img/bg-1.jpg
   desc:
     - But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.
     - Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
