@@ -6,7 +6,7 @@ highlight: "#fed136"
 #dark: "#492910"
 
 #Image Customization
-header-image: "assets/img/header.jpg"
+header-image: "assets/img/header.png"
 contact-image: "img/contact.png"
 action-image: "img/call-to-action.jpg"
 about-image: "img/about.jpg"
