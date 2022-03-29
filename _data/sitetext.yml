@@ -10,7 +10,7 @@ services:
       desc: "Honesty is the cornerstone of all success. Without honesty, confidence and ability to perform shall cease to exist."
       icon: fa fa-bolt
     - title: "Responsibility"
-      desc: "“We think our job is to take responsibility for the complete customer satisfaction.” Success is not final; failure is not fatal: it is the courage to continue that counts."
+      desc: "“Our job is to take responsibility for the complete customer satisfaction.” Success is not final; failure is not fatal: it is the courage to continue that counts."
       icon: fa fa-fire
 
 portfolio:
