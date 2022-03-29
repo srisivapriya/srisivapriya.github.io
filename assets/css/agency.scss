@@ -6,27 +6,39 @@
 @import "base/mixins.scss";
 
 // Custom colors
-$primary: {{ site.data.style.highlight | default: "#fed136" }} !default;
-$white: {{ site.data.style.white | default: "#fff" }} !default;
-$black: {{ site.data.style.black | default: "#000" }} !default;
+$primary: #fed136;
+$white: #fff;
+$black: #000;
+$light: #fff0bc;
+$dark: #492910;
 
 // Custom Images
-$header-image: "{{ site.data.style.header-image }}";
-$contact-image: "{{ site.data.style.contact-image }}";
+$contact-image: "../img/contact.png";
+$action-image: "../img/call-to-action.jpg";
+$about-image: "../img/about.jpg";
 
 // Global CSS
 @import "base/page.scss";
 
 // Components
 @import "components/buttons.scss";
+@import "components/loaders.scss";
+@import "components/pulsing.scss";
 @import "components/navbar.scss";
-@import "components/client-scroll.scss";
 
 // Layout
 @import "layout/masthead.scss";
 @import "layout/services.scss";
 @import "layout/portfolio.scss";
 @import "layout/timeline.scss";
-@import "layout/team.scss";
 @import "layout/contact.scss";
 @import "layout/footer.scss";
+@import "layout/features.scss";
+@import "layout/back-to-top.scss";
+@import "layout/gallery.scss";
+@import "layout/loader.scss";
+@import "layout/parallax.scss";
+@import "layout/pricing.scss";
+@import "layout/scroll.scss";
+@import "layout/services.scss";
+@import "layout/testimony.scss";

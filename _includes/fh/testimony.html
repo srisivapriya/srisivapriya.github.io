@@ -1,0 +1,31 @@
+{% if site.data.fh.testimony %}
+<!-- testimony -->
+<section id="testimonials" class="bg-light" style="visibility: visible; padding: 60px 0;">
+  <div class="container">
+    <header class="section-header mb-5">
+      <h3>{{ site.data.fh.testimony.title | default: "Testimonials" }}</h3>
+    </header>
+    <div class="owl-carousel testimonials-carousel owl-loaded owl-drag">
+      <div class="owl-stage-outer">
+        <div class="owl-stage" style="transform: translate3d(-5550px, 0px, 0px); transition: all 0.25s ease 0s; width: 12210px;">
+          {% for client in site.data.fh.testimony.list %}
+          <div class="owl-item cloned" style="width: 1110px;">
+            <div class="testimonial-item text-center">
+              <img src="{{ client.image }}" class="testimonial-img" alt="{{ client.name }}">
+              <h3>{{ client.name }}</h3>
+              <p class="fs-5">{{ client.position }}</p>
+              <p class="fst-italic fs-5" style="margin: 0 auto 15px auto;">
+                <img src="/assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
+                {{ client.text }}
+                <img src="/assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
+              </p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End testimony -->
+{% endif %}

@@ -1,0 +1,71 @@
+---
+layout: page
+title: Gallery
+permalink: /gallery
+---
+<!-- Gallery -->
+<div class="container pt-5">
+  <div class="text-center py-3">
+    <h2 class="text-uppercase mb-1">{{ site.data.sitetext.gallery.title | default: 'OUR GALLERY'}}</h2>
+    <p class="fs-5 text-muted">{{ site.data.sitetext.gallery.desc | default: 'Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia.'}}</p>
+  </div>
+  <ul class="nav nav-pills nav-justified mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all" aria-selected="true">All</button>
+    </li>
+    {% for project in site.data.sitetext.gallery.tabs %}
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="pills-{{ project.name }}-tab" data-bs-toggle="pill" data-bs-target="#pills-{{ project.name }}" type="button" role="tab" aria-controls="pills-{{ project.name }}" aria-selected="false">{{ project.title | default: 'first' | upcase }}</button>
+    </li>
+    {% endfor %}
+  </ul>  
+</div>
+<div class="container-fluid">
+  <div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">
+      {% for inc in site.data.sitetext.gallery.tabs %}
+      {% capture gallery_path %}assets/gallery/{{ inc.name }}{% endcapture %}
+      <div class="my-5 text-center py-3" id="{{ inc.name | default: 'first'}}">
+        <h2 class="text-uppercase mb-1">{{ inc.title | upcase }}</h2>
+      </div>
+      <div class="row">
+        {% for image in site.static_files %}
+        {% if image.path contains gallery_path %}
+        <div class="col-xl-3 col-lg-4 col-md-6 col-12" style="padding: 0px;">
+          <div class="project">
+            <img src="{{ image.path }}" class="img-fluid" alt="image">
+            <a href="{{ image.path }}" class="icon image-popup d-flex justify-content-center align-items-center">
+              <i class="fas fa-expand-alt"></i>
+            </a>
+          </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+    {% for inc in site.data.sitetext.gallery.list %}
+    <div class="tab-pane fade" id="pills-{{ inc.name }}" role="tabpanel" aria-labelledby="pills-{{ inc.name }}-tab">
+      {% capture tab_path %}assets/gallery/{{ inc.name }}{% endcapture %}
+      <div class="my-5 text-center py-3" id="{{ inc.name | default: 'first'}}">
+        <h2 class="text-uppercase mb-1">{{ inc.title | upcase }}</h2>
+      </div>
+      <div class="row">
+        {% for image in site.static_files %}
+        {% if image.path contains tab_path %}
+        <div class="col-xl-3 col-lg-4 col-md-6 col-12" style="padding: 0px;">
+          <div class="project">
+            <img src="{{ image.path }}" class="img-fluid" alt="image">
+            <a href="{{ image.path }}" class="icon image-popup d-flex justify-content-center align-items-center">
+              <i class="fas fa-expand-alt"></i>
+            </a>
+          </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>  
+</div>
+<!-- End Gallery -->

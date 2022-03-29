@@ -3,3 +3,49 @@
   margin: 15px 0;
   text-transform: none;
 }
+
+#services {
+  .call-to-action {
+    min-height: 60vh;
+    background: linear-gradient(rgba(0, 142, 99, 0.1), rgba(0, 0, 0, 0.1)), url("#{$action-image}") fixed center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding: 60px 0;
+  }
+  
+  .call-to-action h3 {
+    color: $white;
+    font-size: 28px;
+    font-weight: 700;
+  }
+  
+  .call-to-action p {
+    color: $white;
+  }
+  
+  .call-to-action .cta-btn {
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 28px;
+    border-radius: 25px;
+    transition: 0.5s;
+    margin-top: 10px;
+    border: 2px solid $white;
+    color: $white;
+  }
+  
+  .call-to-action .cta-btn:hover {
+    background: $primary;
+    border: 2px solid $primary;
+  }  
+}
+
+#about {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("#{$about-image}") fixed center center;
+}

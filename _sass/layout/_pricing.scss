@@ -1,0 +1,107 @@
+.pricing-entry {
+  border: 2px solid $primary;
+  position: relative;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+
+@media (max-width: 767.98px) {
+  .pricing-entry {
+    margin-bottom: 4em;
+  }
+}
+
+.pricing-entry > div {
+  padding: 20px;
+}
+
+.pricing-entry > div p {
+  margin-bottom: 0;
+}
+
+.pricing-entry h3 {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: $dark;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.pricing-entry p .price {
+  font-weight: 900;
+  font-size: 28px;
+  color: $dark;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.pricing-entry ul {
+  margin: 0;
+  padding: 0;
+}
+
+.pricing-entry ul li {
+  list-style: none;
+  padding: 10px 20px;
+}
+
+.pricing-entry ul li:nth-child(odd) {
+  background: #ebe8de;
+}
+
+.pricing-entry .button {
+  position: absolute;
+  bottom: -26px;
+  left: 0;
+  right: 0;
+  margin-bottom: 0;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.pricing-entry .button .btn {
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  border-radius: 30px;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.pricing-entry:hover,
+.pricing-entry:focus {
+  margin-top: -10px;
+  border: 1px solid $dark;
+}
+
+.pricing-entry:hover .btn,
+.pricing-entry:focus .btn {
+  background: $dark !important;
+  border: 1px solid $dark !important;
+  color: $white !important;
+}
+
+.pricing-entry:hover .price,
+.pricing-entry:focus .price {
+  color: $dark;
+}

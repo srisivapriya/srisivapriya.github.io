@@ -1,9 +1,11 @@
 // Styling for the contact section
 section#contact {
+  min-height: 100vh;
   background-color: $gray-900;
   background-image: url("#{$contact-image}");
   background-repeat: no-repeat;
   background-position: center;
+  padding: 50px;
   .section-heading {
     color: $white;
   }

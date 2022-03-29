@@ -10,8 +10,12 @@ p {
 
 a {
   color: $primary;
-  &:hover {
+  text-decoration: solid;
+
+  &:hover, 
+  &:focus {
     color: darken($primary, 10%);
+    text-decoration: solid;
   }
 }
 
@@ -30,7 +34,7 @@ h6 {
 }
 
 .page-section {
-  padding: 100px 0;
+  padding-top: 100px;
   h2.section-heading {
     font-size: 40px;
     margin-top: 0;
@@ -47,7 +51,7 @@ h6 {
 }
 @media (min-width: 768px) {
   section {
-    padding: 150px 0;
+    padding-top: 150px 0;
   }
 }
 

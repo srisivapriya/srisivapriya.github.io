@@ -1,0 +1,25 @@
+<section class="page-section" id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 d-flex">
+        <div class="d-flex justify-content-center align-items-center"
+          style="background-image: url('{{ site.data.fh.video-card.img }}'); background-size: cover; width: 100%; background-position: center;">
+          <a href="{{ site.data.fh.video-card.url }}"
+            class="icon popup-vimeo d-flex justify-content-center align-items-center">
+            <span class="icon-play"><i class="fas fa-play"></i></span>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-6 py-md-5 pb-5 pb-md-5 ms-auto">
+        <h2 class="fs-1 mb-4 mt-md-5">{{ site.data.fh.video-card.title | default: 'WELCOME TO FIERY THEME'}}</h2>
+        {% for text in site.data.fh.video-card.desc %}
+        <p class="fs-5">{{ text }}</p>
+        {% endfor %}
+        <p class="mt-4">
+          <a href="/about" class="btn btn-primary btn-outline-primary py-2" style="color: white;">More</a>
+        </p>
+      </div>
+    </div>    
+  </div>
+
+</section>

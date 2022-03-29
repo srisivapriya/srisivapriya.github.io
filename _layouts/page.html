@@ -1,14 +1,68 @@
 ---
 layout: default
 ---
-{% include nav.html %}
+<!-- Header -->
+<div class="pagehead"></div>
+<!-- End Header -->
 
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" id="mainNav" 
+style="padding-top: 0; padding-bottom: 0; background-color: #212529;">
+
+  <div class="container">
+    <a class="navbar-brand js-scroll-trigger" href="{{ site.baseurl }}/#">
+      {%- if site.logo -%}
+      <img
+        height="{{ site.logo.height | default: 52 }}"
+        src="{{ site.logo.path }}"
+      />
+      {%- else -%} {{ site.title }} {%- endif -%}
+    </a>
+    <button
+      class="navbar-toggler navbar-toggler-right"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarResponsive"
+      aria-controls="navbarResponsive"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      Menu<i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav text-uppercase ms-auto">
+        {%- for link in site.data.navigation.page -%}
+          {% assign thisurl = link.url | prepend: '/' %}
+          {% if link.subnav %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ link.title }}</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              {%- for sub in link.subnav -%}
+                <li><a class="dropdown-item" href="{{ sub.url }}">{{ sub.name }}</a></li>
+              {% endfor %}
+            </ul>
+          </li>
+          {% else %}
+          <li class="nav-item {% if page.url ==  link.url %} active {% endif %}">
+            {%- if link.url -%}
+              <a class="nav-link {% if page.url ==  thisurl %} active {% endif %} js-scroll-trigger" href="{{ link.url }}">{{ link.title }}</a>
+            {%- else if link.section -%}
+              <a class="nav-link js-scroll-trigger" href="{{ site.baseurl }}/#{{ link.section }}">{{ link.title }}</a>
+            {%- else -%}
+              <a class="nav-link js-scroll-trigger" href="#">{{ link.title }}</a>
+            {%- endif -%}
+          </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- End Navigation -->
 {% if page.background == "grey" or page.background == "gray" %}
 <script>
 document.getElementById("page-top").className="bg-light";
 </script>
 {% endif %}
 
-<div class="container" id="pagecontainer">
 {{ content }}
-</div>

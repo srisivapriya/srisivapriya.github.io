@@ -1,0 +1,83 @@
+.project {
+  position: relative;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.project:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  z-index: 1;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.project img {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  z-index: -1;
+  -moz-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  -webkit-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.project .icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: $white;
+  border: 2px;
+  opacity: 0;
+  z-index: 2;
+  i {
+    display: inline-block;
+    border-radius: 60px;
+    border: 2px solid #fff;
+    padding: 0.5em 0.6em;
+  
+  }
+}
+
+@media (max-width: 991.98px) {
+  .project .icon {
+    opacity: 1;
+  }
+}
+
+.project:hover:after,
+.project:focus:after {
+  opacity: 0.8;
+}
+
+
+.project:hover .icon,
+.project:focus .icon {
+  opacity: 1;
+}
+
+.project:hover img,
+.project:focus img {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.3);
+  -o-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+}

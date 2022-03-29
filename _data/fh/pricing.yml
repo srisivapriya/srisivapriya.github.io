@@ -1,0 +1,47 @@
+title: Our Prices
+desc: Far far away, behind the word mountains, far from the countries Vokalia and Consonantia
+list:
+  - name: Hair Style
+    price: $50.00
+    per: / session
+    button: Get Offer
+    buttonlink: "#"
+    features:
+      - Hair Dryer
+      - Hair Coloring
+      - Hair Cut
+      - Hair Dresser
+      - Hair Spa
+  - name: Manicure Pedicure
+    price: $34.50
+    per: / session
+    button: Get Offer
+    buttonlink: "#"
+    features:
+      - Manicure
+      - Pedicure
+      - Coloring
+      - Nails
+      - Nail Cut
+  - name: Makeup
+    price: $54.50
+    per: / session
+    button: Get Offer
+    buttonlink: "#"
+    features:
+      - Makeup
+      - Professional Makeup
+      - Blush On
+      - Facial Massage
+      - Facial Spa
+  - name: Body Treatment
+    price: $89.50
+    per: / session
+    button: Get Offer
+    buttonlink: "#"
+    features:
+      - Massage
+      - Spa
+      - Foot Spa
+      - Body Spa
+      - Relaxing

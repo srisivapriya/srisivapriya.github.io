@@ -1,12 +1,211 @@
 ---
 layout: default
 ---
-{% include navheader.html %}
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+	  <a class="navbar-brand js-scroll-trigger" href="#page-top">
+          {%- if site.logo -%}
+            <img height="{{ site.logo.height | default: 52 }}" src="{{ site.logo.path }}"/>
+          {%- else -%}
+            {{ site.title }}
+          {%- endif -%}
+    </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ms-auto">
+        {% for link in site.data.navigation.home %}
+          <li class="nav-item">
+            {%- if link.url -%}
+              <a class="nav-link js-scroll-trigger" href="{{ link.url }}">{{ link.title }}</a>
+            {%- else if link.section -%}
+              <a class="nav-link js-scroll-trigger" href="#{{ link.section }}">{{ link.title }}</a>
+            {%- else -%}
+              <a class="nav-link js-scroll-trigger" href="#">{{ link.title }}</a>
+            {%- endif -%}
+          </li>
+        {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navigation -->
+  
+  <!-- Header -->
+  <header class="masthead parallax" style="background-image: url('assets/img/header.jpg');">
+    <div class="container">
+      <a href="#services" class='icon-scroll'></a>
+    </div>
+  </header>
+  <!-- End Header -->
 
-{% include services.html %}
-{% include portfolio_grid.html %}
-{% include about.html %}
-{% include timeline.html %}
-{% include team.html %}
-{% include clients.html %}
+<!-- Services -->
+<section class="page-section" id="{{ site.data.sitetext.services.section | default: "services" }}">
+  <div class="container-fluid p-0">
+
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">{{ site.data.sitetext.services.title | default: "Services" }}</h2>
+        {% if site.data.sitetext.services.text %}
+    <h3 class="section-subheading text-muted">{{ site.data.sitetext.services.text }}</h3>
+    {% endif %}
+      </div>
+    </div>
+  
+    <section class="call-to-action">
+      <div class="row text-center">
+        {% for service in site.data.sitetext.services.list %}
+        <div class="col-md-4">
+          <i class="{{ service.icon | default: 'fas fa-shopping-cart' }} fa-3x text-primary"></i>
+          <h4 class="service-heading">{{ service.title | markdownify }}</h4>
+          {% if service.desc %}<div class="text-muted">{{ service.desc | markdownify }}</div>{% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+</section>
+<!-- End Services -->
+
+<!-- Portfolio Grid -->
+<section class="bg-light page-section" id="{{ site.data.sitetext.portfolio.section | default: " portfolio" }}">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">
+          {{ site.data.sitetext.portfolio.title | markdownify | default: "Portfolio" }}
+        </h2>
+        <h3 class="section-subheading text-muted">{{ site.data.sitetext.portfolio.text | markdownify }}</h3>
+      </div>
+    </div>
+    <div class="row">
+      {% for project in site.portfolio %}
+      <div class="col-md-4 col-sm-6">
+        <div class="portfolio-item">
+          <img class="img-fluid" src="{{ project.image }}" alt="{{ project.title }}" onerror="this.style.display='none'">
+          <h3 class="namecard">{{ project.title }}</h3>
+          <a class="text" href="{{ project.permalink | default: project.redirect  | default: " #" }}" {% if project.redirect %}target="_blank"{% endif %}>
+            <h3>{{ project.title }}</h3>
+            <span>{% if project.icon %}<i class="{{ project.icon }}"></i> {% endif %}{{ project.caption }}</span>
+            <p>{{ project.description }}</p>
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- End Portfolio Grid -->
+
+<!-- About -->
+<section class="page-section d-flex align-items-center" id="about">
+  <div class="container-fluid p-0 parallax">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase text-primary">{{ site.data.sitetext.about.title | default: "About Us" }}</h2>
+        <h3 class="section-subheading text-white" style="font-size: 28px; font-weight: 700;">{{ site.data.sitetext.about.heading | default: "" }}</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        {% for text in site.data.sitetext.about.desc %}
+        <div class="large text-white" style="font-size: 20px;">{{ text | markdownify }}</div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End About -->
+
+<!-- Timeline -->
+<section class="bg-light page-section" id="{{ site.data.sitetext.timeline.section | default: "about" }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">{{ site.data.sitetext.timeline.title | markdownify | default: "About" }}</h2>
+        <h3 class="section-subheading text-muted">{{ site.data.sitetext.timeline.text | default: "timeline"}}</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <ul class="timeline">
+    {%- assign align = site.data.sitetext.timeline.start_align -%}
+    {%- for event in site.data.sitetext.timeline.events -%}
+          {%- if align == "right" -%}
+            {%- if event.align and event.align == "left" -%}
+              {%- assign align = "right" -%}
+              <li>
+            {%- else -%}
+              {%- assign align = "left" %}
+              <li class="timeline-inverted">
+            {% endif %}
+          {% else %}
+            {%- if event.align and event.align == "right" -%}
+              {%- assign align = "left" -%}
+              <li class="timeline-inverted">
+            {%- else -%}
+              {%- assign align = "right" %}
+              <li>
+            {% endif %}
+          {%- endif -%}
+            <div class="timeline-image"> 
+              <img class="rounded-circle img-fluid" src="{{ event.image }}" alt="{{ event.alt | default: ""}}">
+            </div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4>{{ event.year | markdownify }}</h4>
+                <h4 class="subheading">{{ event.title }}</h4>
+              </div>
+              <div class="timeline-body">
+                <div class="text-muted">{{ event.desc | markdownify }}</div>
+              </div>
+            </div>
+          </li>
+    {% endfor %}	
+          
+    {% if site.data.sitetext.timeline.end %}	
+    <li class="timeline-inverted">
+            <div class="timeline-image">
+              <h4>{{ site.data.sitetext.timeline.end }}</h4>
+            </div>
+          </li>
+    {% endif %}
+        </ul>
+      </div>
+    </div>
+    <br><br>
+  </div>
+</section>
+<!-- End Timeline -->
+
+<!-- Gallery -->
+<section class="page-section pb-0" id="gallery">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">{{ site.data.sitetext.gallery.title | markdownify | default: "OUR GALLERY" }}</h2>
+        <h3 class="section-subheading text-muted">"If you want to know what a man's like, take a good look at how he treats his inferiors, not his equals"</h3>
+        <a href="/gallery" class="btn btn-lg btn-primary btn-outline-primary mb-4" style="color: white;">More</a>
+      </div>
+    </div>
+    <div class="row">
+      {% for img in site.data.sitetext.gallery.featured %}
+      <div class="col-md-6 col-lg-3"style="padding: 0px;">
+        <div class="project">
+          <img src="{{ img }}" class="img-fluid">
+          <a href="{{ img }}" class="icon image-popup d-flex justify-content-center align-items-center">
+            <i class="fas fa-expand-alt"></i>
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div> 
+  </div>
+</section>
+<!-- End Gallery -->
+
 {% include contact.html %}
+ 

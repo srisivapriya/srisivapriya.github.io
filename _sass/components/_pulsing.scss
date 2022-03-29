@@ -1,0 +1,35 @@
+.icon-play {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin-left: -50px;
+  margin-top: -50px;
+  display: block;
+  width: 100px;
+  height: 100px;
+  font-size: 1.3em;
+  font-weight: light;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 100px;
+  letter-spacing: -1px;
+  color: $primary;
+  border: none;
+  border-radius: 50%;
+  background: $white;
+  cursor: pointer;
+  box-shadow: 0 0 0 0 rgba($primary, 0.5);
+  -webkit-animation: pulse 2s infinite;
+}
+.icon-play:hover {
+  -webkit-animation: none;
+}
+
+@-webkit-keyframes pulse {
+  70% {
+    box-shadow: 0 0 0 50px rgba($primary, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba($primary, 0);
+  }
+}

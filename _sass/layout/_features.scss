@@ -1,0 +1,74 @@
+.features {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.features.img {
+  position: relative;
+  z-index: 0;
+}
+
+@media (max-width: 991.98px) {
+  .features.img {
+    height: 350px;
+  }
+}
+
+.features.img:after,
+.features.img:before {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  right: 50px;
+  bottom: 50px;
+  content: "";
+  border: 3px solid $primary;
+  z-index: -1;
+}
+
+.features.img:before {
+  background: $black;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+  border: none;
+  opacity: 0.5;
+}
+
+.features .text {
+  width: 100%;
+}
+
+.features .text h3 {
+  color: $white;
+}
+
+.text-about {
+  width: 100%;
+}
+
+.text-about h2 {
+  font-size: 20px;
+  text-transform: uppercase;
+  border-bottom: 2px solid $primary;
+  margin-bottom: 50px;
+}
+
+.text-about .logo {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.text-about .logo a {
+  color: $black;
+}
+
+.text-about .logo a span {
+  display: block;
+  font-size: 80px;
+}

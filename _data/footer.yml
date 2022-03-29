@@ -1,0 +1,43 @@
+title: "Sri Siva Priya"
+description: "Quality is the best business plan."
+
+legal:
+  - title: "Privacy Policy"
+    url: "privacy"
+  - title: "Disclaimer"
+    url: "disclaimer"
+
+social:
+  - url: https://twitter.com/rsrknaidu
+    icon: "fab fa-twitter"
+  - url: https://facebook.com/srisivapriya
+    icon: "fab fa-facebook-f"
+  - url: https://instagram.com/rsrknaidu
+    icon: "fab fa-instagram"
+
+pages:
+  left:
+    - title: "Home"
+      url: /
+    - title: "Gallery"
+      url: /gallery
+    - title: "Contact"
+      url: /contact      
+  right:
+    - title: "Sri Siva Priya Filling Station"
+      url: https://goo.gl/maps/ACp52FjtdrS39syRA
+    - title: "Sri Siva Priya Rice Mill"
+      url: https://goo.gl/maps/KqfRSob9NCp92cMg9
+    - title: "Sri Siva Priya Function Hall"
+      url: https://goo.gl/maps/nqW48fX6L7mfv7dAA
+
+reach:
+  - title: Balaga, Srikakulam, AP 532001, India
+    icon: "fas fa-map-marked-alt"
+    url: #
+  - title: +91 9866643778
+    icon: "fas fa-phone-alt"
+    url: "tel:+919866643778"
+  - title: srisivapriya.ssp@gmail.com
+    icon: "fas fa-envelope"
+    url: "mailto:srisivapriya.ssp@gmail.com"
